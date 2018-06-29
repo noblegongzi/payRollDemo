@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+			}
+			a:link {color:#FF0000;}    /* 未被访问的链接 */
+			a:visited {color:#ffoooo;} /* 已被访问的链接 */
+			a:hover {color:greenyellow;}   /* 鼠标指针移动到链接上 */
+			a:active {color:#0000FF;}  /* 正在被点击的链接 */
+		</style>
+	</head>
+	<body bgcolor="beige">
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<form action="../../adminpage.html" method="get" target="_blank">
+						<table border="0" cellspacing="" cellpadding="" align="center">
+							<tr><th align="left"><label for="账号" id="uin__tips" style="display: block;"><font size="4">请输入你的员工编号</font></lable><br /><br /></th></tr>							
+							<tr><td><input name="username" id="账号" size="20" type="text" /><br /><br /></td></tr>
+							<tr><th align="left"><label for="密码" id="uin__tips" style="display: block;" ><font size="4">请输入你的密码</font></lable><br /><br /></th></tr>
+							<tr><td><input name="password" id="密码" size="20" type="password" /><br /><br /></td></tr>
+							<tr><th align="left"><label for="密码" id="uin__tips" style="display: block;" ><font size="4">请选择员工类型</font></lable><br /><br /></td></tr>
+							<tr><td>
+								<input type="radio" name="usertype" value="administrator" checked="checked"/>管理员
+								<input type="radio" name="usertype" value="employee" />员工<br /><br />
+							</td></tr>
+							<tr><td><input type="submit" name="submit" id="submit" value="登录" /></td></tr>
+						</table>
+					</form>
+					<br />
+					<br />
+					<br />
+					<br />
+					<table border="0" cellspacing="" cellpadding="" align="center">
+						<tr><td align="right"><a href="../../register.html" target="_blank">注册账户</a></td></tr>
+					</table>
+	</body>
+</html>

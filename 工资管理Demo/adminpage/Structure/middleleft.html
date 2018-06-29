@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{
+				list-style-type:none;
+				margin:auto;
+				padding:0;
+				text-align: center;
+			}
+			.sonul{
+				list-style-type:none;
+				margin:auto;
+				padding:0;
+				text-align: center;
+				display: none;
+			}
+			a{
+				text-decoration: none;
+				width: 120px;
+			}
+			a.lel1:link {color:#000000; background-color: aliceblue; }    /* 未被访问的链接 */
+			a:link {color:#000000; background-color: cornflowerblue; }
+			a:visited {color:#000000; background-color: cornflowerblue;} /* 已被访问的链接 */
+			a:hover {color:greenyellow;background-color: aqua;}   /* 鼠标指针移动到链接上 */
+			a:active {color:#0000FF;background-color: aqua;}  /* 正在被点击的链接 */
+		</style>
+		<script src="../../js/jquery.min.js" tppabs=""></script>
+		<script type="text/javascript">
+		$(function(){
+			$(".lel1").click(function(){
+				$(this).next().toggle();
+			})
+		})
+//		$(document).ready(function(){
+//		  $("#BasicinformationManagement").click(function(){
+//		  	
+//		  $("#Departmentalinformationmanagementul").hide();
+//		  });
+//		  $("#BasicinformationManagement").click(function(){
+//		  $("#Departmentalinformationmanagementul").show();
+//		  });
+//		});
+		</script>
+	</head>
+	<body bgcolor="beige">
+		<center><h4>基础信息管理</h4></center>
+		<ul>
+			<li>
+				<a id="Departmentalinformationmanagement" href="javascript:void(0)" class="lel1">部门信息管理</a>
+				<ul id="Departmentalinformationmanagementul" class="sonul">
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/creatDepartment.html">创建</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/changeDepartment.html">修改</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/deleteDepartment.html">删除</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/searchDepartment.html">查询</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="PostInformationmanagement" href="javascript:void(0)" class="lel1" >岗位信息管理</a>
+				<ul class="sonul" >
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/PostInformationmanagement/creatPost.html">创建</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/PostInformationManagement/changePost.html">修改</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/PostInformationManagement/deletePost.html">删除</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/PostInformationManagement/searchPost.html">查询</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="Departmentalinformationmanagement" href="javascript:void(0)" class="lel1" >员工信息管理</a>
+				<ul class="sonul">
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/creatDepartment.html">创建</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/changeDepartment.html">修改</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/deleteDepartment.html">删除</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../BasicinformationManagement/Departmentalinformationmanagement/searchDepartment.html">查询</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<center><h4>工资管理</h4></center>
+		<ul>
+			<li>
+				<a id="Departmentalinformationmanagement" href="javascript:void(0)" class="lel1">工资项目管理</a>
+				<ul class="sonul">
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/creatSalaryItems.html">创建</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/changeSalaryItems.html">修改</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/deleteSalaryItems.html">删除</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/searchSalaryItems.html">查询</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/setFormula.html">设定公式</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="PostInformationmanagement" href="javascript:void(0)" class="lel1" >固定工资管理</a>
+				<ul class="sonul">
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/FixedwageManagement/changeFixedwage.html">维护</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/FixedwageManagement/searchFixedwage.html">查询</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="Departmentalinformationmanagement" href="javascript:void(0)" class="lel1" >导入信息管理</a>
+				<ul class="sonul">
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/ImportInformationmanagement/changeImportInformation.html">维护</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/ImportInformationmanagement/searchImportInformation.html">查询</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="Departmentalinformationmanagement" href="javascript:void(0)" class="lel1" >工资结算</a>
+				<ul class="sonul">
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/Payrollsettlement/calculatePayroll.html">计算工资</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/Payrollsettlement/temporaryPayroll.html">暂存工资</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/Payrollsettlement/grantPayroll.html">发放工资</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<center><h4>报表管理</h4></center>
+		<ul>
+			<li><a href="../ReportManagement/searchReport.html" target="adminpagemiddlerightFrame" class="actionlink">工资报表查询</a></li>
+			<li><a href="../ReportManagement/printPayrollinvoice.html" target="adminpagemiddlerightFrame" class="actionlink">打印工资条</a></li>
+			<li><a href="../ReportManagement/Payrollcoutreport.html" target="adminpagemiddlerightFrame" class="actionlink">工资统计报表</a></li>
+		</ul>
+		
+		
+		
+		<!--
+		<table border="0" cellspacing="" cellpadding="">
+			<tr><th class="tableHead" colspan="4">工资管理</th></tr>
+			<tr>
+				<td bgcolor="#ff00ff"><h4>工资项目管理</h4></td>
+				<td bgcolor="coral"><h4>固定工资管理</h4</td>
+				<td bgcolor="deepskyblue"><h4>导入信息管理</h4></td>
+				<td bgcolor="crimson"><center><h4>工资结算</h4></center></td>
+			</tr>
+			<tr>
+				<td bgcolor="#ff00ff">
+				<ul>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/creatSalaryItems.html">创建</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/changeSalaryItems.html">修改</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/deleteSalaryItems.html">删除</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/searchSalaryItems.html">查询</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/SalaryItemsmanagement/setFormula.html">设定公式</a>
+					</li>
+				</ul>
+				</td>
+				<td bgcolor="coral">
+				<ul>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/FixedwageManagement/changeFixedwage.html">维护</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/FixedwageManagement/searchFixedwage.html">查询</a>
+					</li>
+				</ul>
+				</td>
+				<td bgcolor="deepskyblue">
+				<ul>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/ImportInformationmanagement/changeImportInformation.html">维护</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/ImportInformationmanagement/searchImportInformation.html">查询</a>
+					</li>
+				</ul>
+				</td>
+				<td bgcolor="crimson">
+				<ul>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/Payrollsettlement/calculatePayroll.html">计算工资</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/Payrollsettlement/temporaryPayroll.html">暂存工资</a>
+					</li>
+					<li>
+						<a target="adminpagemiddlerightFrame" href="../PayrollManagement/Payrollsettlement/grantPayroll.html">发放工资</a>
+					</li>
+				</ul>
+				</td>
+			</tr>
+		</table>
+		<br />
+		<br />
+		<table border="0" cellspacing="" cellpadding="">
+			<tr><th class="tableHead">报表管理</th></tr>
+			<tr><td bgcolor="#ff00ff"><a href="../ReportManagement/searchReport.html" target="adminpagemiddlerightFrame" class="actionlink">工资报表查询</a></td></tr>
+			<tr><td bgcolor="coral"><a href="../ReportManagement/printPayrollinvoice.html" target="adminpagemiddlerightFrame" class="actionlink">打印工资条</a></td></tr>
+			<tr><td bgcolor="deepskyblue"><a href="../ReportManagement/Payrollcoutreport.html" target="adminpagemiddlerightFrame" class="actionlink">工资统计报表</a></td></tr>
+		</table></center>-->
+		
+	</body>
+</html>
