@@ -3,7 +3,105 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/table.css"/>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/table.js" ></script>
 	</head>
-	<body>
+	<body style="background: url(../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<script>
+			var salary = [];
+			salary[0] = new Object();
+			salary[0].id="10001";
+			salary[0].name="张三";
+			salary[0].realsalary=3110;
+			salary[0].basicsalary=3000;
+			salary[0].warmsub=100;
+			salary[0].sickday=2;
+			salary[0].busyday=4;
+			salary[0].lateday=1;
+			salary[0].overtimeday=0;
+			salary[0].sickmoney=40;
+			salary[0].busymoney=200;
+			salary[0].latemoney=10;
+			salary[0].overtimemoney=0;
+			salary[0].tax=150;
+			salary[1] = new Object();
+			salary[1].id="10001";
+			salary[1].name="李四";
+			salary[1].realsalary=3110;
+			salary[1].basicsalary=3000;
+			salary[1].warmsub=100;
+			salary[1].sickday=2;
+			salary[1].busyday=4;
+			salary[1].lateday=1;
+			salary[1].overtimeday=0;
+			salary[1].sickmoney=40;
+			salary[1].busymoney=200;
+			salary[1].latemoney=10;
+			salary[1].overtimemoney=0;
+			salary[1].tax=150;
+			salary[2] = new Object();
+			salary[2].id="10001";
+			salary[2].name="王五";
+			salary[2].realsalary=3110;
+			salary[2].basicsalary=3000;
+			salary[2].warmsub=100;
+			salary[2].sickday=2;
+			salary[2].busyday=4;
+			salary[2].lateday=1;
+			salary[2].overtimeday=0;
+			salary[2].sickmoney=40;
+			salary[2].busymoney=200;
+			salary[2].latemoney=10;
+			salary[2].overtimemoney=0;
+			salary[2].tax=150;
+			var json = JSON.stringify(salary);
+		</script>
+		<center>
+			<br /><br />
+			<font size="5" color="cornflowerblue">计算工资如下：</font>
+			<br /><br /><br />
+			<table border="1" align="center">
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>实发工资</th>
+					<th>基本工资</th>
+					<th>采暖补贴</th>
+					<th>病假天数</th>
+					<th>事假天数</th>
+					<th>迟到次数</th>
+					<th>加班天数</th>
+					<th>病假扣款</th>
+					<th>事假扣款</th>
+					<th>迟到扣款</th>
+					<th>加班工资</th>
+					<th>个人所得税</th>
+				</tr>
+				<tbody id="tab">
+				<script>
+					for(var i=0;i<salary.length;i++)
+					{
+						var x="<tr><td>"+salary[i].id+"</td><td>"+salary[i].name+"</td><td>"+salary[i].realsalary+"</td><td>"+salary[i].realsalary+"</td><td>"+salary[i].warmsub+"</td><td>"+salary[i].sickday+"</td><td>"+salary[i].busyday+"</td><td>"+salary[i].lateday+"</td><td>"+salary[i].overtimeday+"</td><td>"+salary[i].sickmoney+"</td><td>"+salary[i].busymoney+"</td><td>"+salary[i].latemoney+"</td><td>"+salary[i].overtimemoney+"</td><td>"+salary[i].tax+"</td></tr>"
+						document.write(x)
+					}
+				</script>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			var Ptr=document.getElementById("tab").getElementsByTagName("tr");
+			window.onload=$;
+			for(var i=0;i<Ptr.length;i++) {
+			    Ptr[i].onmouseover=function(){
+			    this.tmpClass=this.className;
+			    this.className = "t3";
+			    
+			    };
+			    Ptr[i].onmouseout=function(){
+			    this.className=this.tmpClass;
+			    };
+			}
+			</script>
+		</center>
 	</body>
 </html>

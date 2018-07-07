@@ -3,7 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/input.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../../js/input.js"></script>
 	</head>
-	<body>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<center>
+			<br /><br />
+			<form action="../../login.asp" method="post" target="_top" class="border_radius" id="focus">
+				<h2>创建工资项目</h2>
+				<input type="radio" id="itemype" name="itemtype" value="FixedItem" checked="checked"/>固定项目
+				<input type="radio" id="itemtype" name="itemtype" value="ImportItem" />导入项目
+				<br />
+				<input type="radio" id="itemtype" name="itemtype" value="ImportItem" />实发项目
+				<input type="radio" id="itemtype" name="itemtype" value="ImportItem" />计算项目
+				<label><span>请输入创建的工资项目名称</span><input type="text" class="input_txt border_radius" name="Itemname" id="Itemname" /></label>
+				<label><span>若是计算项目输入计算系数</span><input type="text" class="input_txt border_radius" name="Itemtid" id="Itemid" /></label>
+				<input type="submit" name="submit" id="submit" value="创建" class="buttons" />
+			</form>
+		</center>
 	</body>
 </html>

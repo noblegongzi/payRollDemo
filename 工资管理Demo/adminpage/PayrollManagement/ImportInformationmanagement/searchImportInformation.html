@@ -3,7 +3,71 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/table.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/table.js" ></script>
 	</head>
-	<body>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<script>
+			var importinfor = [];
+			importinfor[0] = new Object();
+			importinfor[0].name="张三";
+			importinfor[0].sickday=1;
+			importinfor[0].busyday=1;
+			importinfor[0].lateday=1;
+			importinfor[0].overtimeday=1;
+			importinfor[1] = new Object();
+			importinfor[1].name="李四";
+			importinfor[1].sickday=2;
+			importinfor[1].busyday=2;
+			importinfor[1].lateday=2;
+			importinfor[1].overtimeday=2;
+			importinfor[2] = new Object();
+			importinfor[2].name="王五";
+			importinfor[2].sickday=3;
+			importinfor[2].busyday=3;
+			importinfor[2].lateday=3;
+			importinfor[2].overtimeday=3;
+			var json = JSON.stringify(importinfor);
+		</script>
+		<center>
+			<br /><br />
+			<font size="5" color="cornflowerblue">固定工资信息如下：</font>
+			<br /><br /><br />
+			<table border="1" align="center">
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>病假天数</th>
+					<th>事假天数</th>
+					<th>迟到次数</th>
+					<th>加班天数</th>
+					<th>修改</th>
+				</tr>
+				<tbody id="tab">
+				<script>
+					for(var i=0;i<importinfor.length;i++)
+					{
+						var x="<tr><td>"+(i+1)+"</td><td>"+importinfor[i].name+"</td><td>"+importinfor[i].sickday+"</td><td>"+importinfor[i].busyday+"</td><td>"+importinfor[i].lateday+"</td><td>"+importinfor[i].overtimeday+"</td><td>"+"<form action='changeImportInformation.html' method='get'><input type='hidden' name='inchangeorder' value='"+(i+1)+"' /><input type='submit' value='修改' /></form></td></tr>"
+						document.write(x)
+					}
+				</script>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			var Ptr=document.getElementById("tab").getElementsByTagName("tr");
+			window.onload=$;
+			for(var i=0;i<Ptr.length;i++) {
+			    Ptr[i].onmouseover=function(){
+			    this.tmpClass=this.className;
+			    this.className = "t3";
+			    
+			    };
+			    Ptr[i].onmouseout=function(){
+			    this.className=this.tmpClass;
+			    };
+			}
+			</script>
+		</center>
 	</body>
 </html>

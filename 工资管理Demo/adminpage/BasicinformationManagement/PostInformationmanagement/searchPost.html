@@ -3,7 +3,49 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/table.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/table.js" ></script>
 	</head>
-	<body>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<script>
+			var Jname=new Array("经理","主管","小职员")
+		</script>
+		<center>
+			<br /><br />
+			<font size="5" color="cornflowerblue">所有职位信息如下：</font>
+			<br /><br /><br />
+			<table border="1" align="center">
+				<tr>
+					<th>编号</th>
+					<th>职位</th>
+					<th>删除</th>
+					<th>修改</th>
+				</tr>
+				<tbody id="tab">
+				<script>
+					for(var i=0;i<Jname.length;i++)
+					{
+						var x="<tr><td>"+(i+1)+"</td><td>"+Jname[i]+"</td><td>"+"<form action='deletePost.html' method='get'><input type='hidden' name='Jdelorder' value='"+(i+1)+"' /><input type='submit' value='删除' onclick='delcfm()' /></form></td>"+"<td><form action='changePost.html' method='get'><input type='hidden' name='Jchangeorder' value='"+(i+1)+"' /><input type='submit' value='修改' /></form></td></tr>"
+						document.write(x)
+					}
+				</script>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			var Ptr=document.getElementById("tab").getElementsByTagName("tr");
+			window.onload=$;
+			for(var i=0;i<Ptr.length;i++) {
+			    Ptr[i].onmouseover=function(){
+			    this.tmpClass=this.className;
+			    this.className = "t3";
+			    
+			    };
+			    Ptr[i].onmouseout=function(){
+			    this.className=this.tmpClass;
+			    };
+			}
+			</script>
+		</center>
 	</body>
 </html>

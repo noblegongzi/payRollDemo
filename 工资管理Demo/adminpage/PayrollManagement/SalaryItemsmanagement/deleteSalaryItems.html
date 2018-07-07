@@ -3,7 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/input.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../../js/input.js"></script>
+		<script type="text/javascript" src="../../../js/table.js"></script>
 	</head>
-	<body>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<center>
+			<br /><br />
+			<form action="../../login.asp" method="post" target="_top" class="border_radius" id="focus">
+				<h2>删除工资项目</h2>
+				<label><span>请输入需要删除的项目名称</span><input type="text" class="input_txt border_radius" name="Itemname" id="Itemname" /></label>
+				<input type="submit" name="submit" id="submit" value="删除" class="buttons" onclick="delcfm()"/>
+			</form>
+		</center>
 	</body>
 </html>

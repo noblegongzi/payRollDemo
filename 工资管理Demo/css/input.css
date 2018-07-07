@@ -1,0 +1,72 @@
+form {
+	width: 300px;
+	margin: 10px auto;
+	border: solid 1px #E0DEDE;
+	background: #FCF9EF;
+	padding: 30px;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+label {
+	display: block;
+	height: 40px;
+	position: relative;
+	margin: 20px 0;
+}
+
+span {
+	position: absolute;
+	float: left;
+	line-height: 40px;
+	left: 10px;
+	color: #BCBCBC;
+	cursor: text;
+}
+
+.input_txt {
+	width: 295px;
+	border: solid 1px #ccc;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+	height: 38px;
+	text-indent: 10px;
+}
+
+.input_txt:focus {
+	box-shadow: 0 0 4px rgba(255, 153, 164, 0.8);
+	border: solid 1px #B00000;
+}
+
+.border_radius {
+	border-radius: 5px;
+	color: #B00000;
+}
+
+h2 {
+	font-family: "微软雅黑";
+	text-shadow: 1px 1px 3px #fff;
+}
+
+.buttons {
+	position: relative;
+	padding: 5px 20px;
+	font-size: 20px;
+	border: solid 1px #B00000;
+	background: #D0F0FF;
+	left: 100px;
+}
+
+a {
+	padding: 5px 20px;
+	font-size: 20px;
+	border: solid 1px #B00000;
+	background: #D0F0FF;
+	text-decoration: none;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:visited {
+	color: #000000;
+}
