@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/table.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/table.js" ></script>
+	</head>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<script>
+			var Pname=new Array("张三","李四","王五")
+		</script>
+		<center>
+			<br />
+			<br />
+			<font size="5" color="cornflowerblue">所有员工信息如下：</font>
+			<br /><br /><br />
+			<table border="1" align="center">
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>删除</th>
+					<th>修改</th>
+				</tr>
+				<tbody id="tab">
+				<script>
+					for(var i=0;i<Pname.length;i++)
+					{
+						var x="<tr><td>"+(i+1)+"</td><td>"+Pname[i]+"</td><td>"+"<form action='deleteEmployee.html' method='get'><input type='hidden' name='Pdelorder' value='"+(i+1)+"' /><input type='submit' value='删除' onclick='delcfm()' /></form></td>"+"<td><form action='changeEmployee.html' method='get'><input type='hidden' name='Pchangeorder' value='"+(i+1)+"' /><input type='submit' value='修改' /></form></td></tr>"
+						document.write(x)
+						//						X输出一个表格,表格中两个提交按钮:删除,修改.删除的action为deleteEmployee.html修改则为changeEmployee.html.使用get方法分别上传一个Pdelorder和Pchangeorder(需要删除或修改的序号)
+					}
+				</script>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			var Ptr=document.getElementById("tab").getElementsByTagName("tr");
+			window.onload=$;
+			for(var i=0;i<Ptr.length;i++) {
+			    Ptr[i].onmouseover=function(){
+			    this.tmpClass=this.className;
+			    this.className = "t3";
+			    
+			    };
+			    Ptr[i].onmouseout=function(){
+			    this.className=this.tmpClass;
+			    };
+			}
+			</script>
+		</center>
+		
+	</body>
+</html>

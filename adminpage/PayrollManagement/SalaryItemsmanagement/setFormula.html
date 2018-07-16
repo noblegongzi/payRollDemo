@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/input.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../../js/input.js"></script>
+	</head>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<br /><br />
+		<script>
+			var CalcuItem = [];
+			CalcuItem[0] = new Object();
+			CalcuItem[0].name="个人支付养老保险";
+			CalcuItem[0].number=0.08;
+			CalcuItem[1] = new Object();
+			CalcuItem[1].name="公司支付养老保险";
+			CalcuItem[1].number=0.08;
+			CalcuItem[2] = new Object();
+			CalcuItem[2].name="病假扣款";
+			CalcuItem[2].number=20;
+			CalcuItem[3] = new Object();
+			CalcuItem[3].name="事假扣款";
+			CalcuItem[3].number=50;
+			CalcuItem[4] = new Object();
+			CalcuItem[4].name="迟到扣款";
+			CalcuItem[4].number=10;
+			CalcuItem[5] = new Object();
+			CalcuItem[5].name="加班工资";
+			CalcuItem[5].number=100;
+			var json = JSON.stringify(CalcuItem);
+		</script>
+		
+		<center>
+			<form action="http://www.taobao.com" method="get" target="_top" class="border_radius" id="focus">
+				<h2>修改计算公式</h2>
+				<script>
+					
+					for(var i=0;i<CalcuItem.length;i++)
+					{
+						var x="<b>"+CalcuItem[i].name+":<label><span class='2'>"+CalcuItem[i].number+"</span><input type='text' class='input_txt border_radius' name='efficient"+i+"' id='efficien"+i+"' /></label></b>"
+						document.write(x)
+					}
+				</script>
+				<input type="submit" name="submit" id="submit" value="修改" class="buttons"  />
+				<p align="right">（不输入代表不修改）</p>
+			</form>
+		</center>
+	</body>
+</html>

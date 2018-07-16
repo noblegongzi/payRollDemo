@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/table.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/table.js" ></script>
+	</head>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<script>
+			var FixedItem = [];
+			FixedItem[0] = "基本工资"
+			FixedItem[1] = "采暖补贴"
+			var ImportItem=[];
+			ImportItem[0]="病假天数"
+			ImportItem[1]="事假天数"
+			ImportItem[2]="迟到次数"
+			ImportItem[3]="加班天数"
+			var RealItem =[];
+			RealItem[0]="实发工资"
+			var CalcuItem = [];
+			CalcuItem[0] = new Object();
+			CalcuItem[0].name="个人支付养老保险";
+			CalcuItem[0].number=0.08;
+			CalcuItem[1] = new Object();
+			CalcuItem[1].name="公司支付养老保险";
+			CalcuItem[1].number=0.08;
+			CalcuItem[2] = new Object();
+			CalcuItem[2].name="病假扣款";
+			CalcuItem[2].number=20;
+			CalcuItem[3] = new Object();
+			CalcuItem[3].name="事假扣款";
+			CalcuItem[3].number=50;
+			CalcuItem[4] = new Object();
+			CalcuItem[4].name="迟到扣款";
+			CalcuItem[4].number=10;
+			CalcuItem[5] = new Object();
+			CalcuItem[5].name="加班工资";
+			CalcuItem[5].number=100;
+			var json = JSON.stringify(CalcuItem);
+		</script>
+		<center>
+			<br /><br />
+			<font size="5" color="cornflowerblue">固定工资信息如下：</font>
+			<br /><br /><br />
+			<table border="1" align="center">
+				<tr>
+					<th>实发项目</th>
+					<th>固定项目</th>
+					<th>导入项目</th>
+					<th>计算项目</th>
+					<th>计算项目的系数</th>
+				</tr>
+				<tbody id="tab">
+				<script>
+					for(var i=0;i<CalcuItem.length;i++)
+					{
+						var x="<tr><td>"+RealItem[i]+"</td><td>"+FixedItem[i]+"</td><td>"+ImportItem[i]+"</td><td>"+CalcuItem[i].name+"</td><td>"+CalcuItem[i].number+"</td></tr>"
+						document.write(x)
+					}
+				</script>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			var Ptr=document.getElementById("tab").getElementsByTagName("tr");
+			window.onload=$;
+			for(var i=0;i<Ptr.length;i++) {
+			    Ptr[i].onmouseover=function(){
+			    this.tmpClass=this.className;
+			    this.className = "t3";
+			    
+			    };
+			    Ptr[i].onmouseout=function(){
+			    this.className=this.tmpClass;
+			    };
+			}
+			</script>
+		</center>
+	</body>
+</html>

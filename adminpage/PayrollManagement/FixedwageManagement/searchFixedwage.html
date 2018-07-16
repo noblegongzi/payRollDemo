@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/table.css"/>
+		<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/table.js" ></script>
+	</head>
+	<body style="background: url(../../../img/bgDemo.png); background-repeat: no-repeat;background-size: cover;">
+		<script>
+			var DepartmentFix = [];
+			DepartmentFix[0] = new Object();
+			DepartmentFix[0].Departmentname="开发";
+			DepartmentFix[0].Fixedwage=100;
+			DepartmentFix[1]=new Object();
+			DepartmentFix[1].Departmentname="运营";
+			DepartmentFix[1].Fixedwage=200;
+			DepartmentFix[2]=new Object();
+			DepartmentFix[2].Departmentname="推广";
+			DepartmentFix[2].Fixedwage=300;
+			var json = JSON.stringify(DepartmentFix);
+		</script>
+		<center>
+			<br /><br />
+			<font size="5" color="cornflowerblue">固定工资信息如下：</font>
+			<br /><br /><br />
+			<table border="1" align="center">
+				<tr>
+					<th>编号</th>
+					<th>部门</th>
+					<th>固定工资</th>
+					<th>修改</th>
+				</tr>
+				<tbody id="tab">
+				<script>
+					for(var i=0;i<DepartmentFix.length;i++)
+					{
+						var x="<tr><td>"+(i+1)+"</td><td>"+DepartmentFix[i].Departmentname+"</td><td>"+DepartmentFix[i].Fixedwage+"</td><td>"+"<form action='changeFixedwage.html' method='get'><input type='hidden' name='Pchangeorder' value='"+(i+1)+"' /><input type='submit' value='修改' /></form></td></tr>"
+						document.write(x)
+					}
+				</script>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			var Ptr=document.getElementById("tab").getElementsByTagName("tr");
+			window.onload=$;
+			for(var i=0;i<Ptr.length;i++) {
+			    Ptr[i].onmouseover=function(){
+			    this.tmpClass=this.className;
+			    this.className = "t3";
+			    
+			    };
+			    Ptr[i].onmouseout=function(){
+			    this.className=this.tmpClass;
+			    };
+			}
+			</script>
+		</center>
+	</body>
+</html>
