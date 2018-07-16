@@ -14,6 +14,20 @@ $(document).ready(function() {
 			var val = $(this).val();
 			if(val != "") {
 				$(this).siblings("span").hide();
+				if(val.length<5)
+				{
+					$("p.warning").hide();
+					$("p#idlesswaring").show();
+				}
+				else if(val.length>10)
+				{
+					$("p.warning").hide();
+					$("p#idmorewaring").show();
+				}
+				else
+				{
+					$("p.warning").hide();
+				}
 			} else {
 				$(this).siblings("span").show();
 			}
@@ -34,9 +48,35 @@ $(document).ready(function() {
 			var val = $(this).val();
 			if(val != "") {
 				$(this).siblings("span").hide();
-			} else {
+				if(val.length<5)
+				{
+					$("p.warning").hide();
+					$("p#pwlesswaring").show();
+				}
+				else if(val.length>10)
+				{
+					$("p.warning").hide();
+					$("p#pwmorewaring").show();
+				}
+				else
+				{
+					$("p.warning").hide();
+				}
+			} else if(val == "") {
 				$(this).siblings("span").show();
 			}
 		})
 	})
 })
+
+	function judge() {
+		var x=1;
+		$(".input_txt").each(function(){
+			var y=$(this).val();
+			if(y=="")
+			x=0;
+		})
+	if(x==0) {
+		window.event.returnValue = false;
+	}
+}

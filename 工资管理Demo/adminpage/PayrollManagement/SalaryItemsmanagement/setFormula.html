@@ -33,12 +33,13 @@
 		</script>
 		
 		<center>
-			<form action="../../login.asp" method="post" target="_top" class="border_radius" id="focus">
+			<form action="http://www.taobao.com" method="get" target="_top" class="border_radius" id="focus">
 				<h2>修改计算公式</h2>
 				<script>
+					
 					for(var i=0;i<CalcuItem.length;i++)
 					{
-						var x="<label><span>请输入"+CalcuItem[i].name+"系数</span><input type='text' class='input_txt border_radius' name='Fixedwage' id='Fixedwage' /></label>"
+						var x="<b>"+CalcuItem[i].name+":<label><span class='2'>"+CalcuItem[i].number+"</span><input type='text' class='input_txt border_radius' name='efficient"+i+"' id='efficien"+i+"' /></label></b>"
 						document.write(x)
 					}
 				</script>

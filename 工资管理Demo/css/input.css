@@ -62,6 +62,9 @@ a {
 	background: #D0F0FF;
 	text-decoration: none;
 }
+.warning {
+	display: none;
+}
 
 a:link {
 	color: #000000;
