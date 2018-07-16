@@ -1,0 +1,30 @@
+			ul {
+				list-style-type: none;
+				margin: auto;
+				padding: 0;
+				text-align: center;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a:link {
+				color: #FF0000;
+			}
+			/* 未被访问的链接 */
+			
+			a:visited {
+				color: #ffffff;
+			}
+			/* 已被访问的链接 */
+			
+			a:hover {
+				color: greenyellow;
+			}
+			/* 鼠标指针移动到链接上 */
+			
+			a:active {
+				color: #0000FF;
+			}
+			/* 正在被点击的链接 */
